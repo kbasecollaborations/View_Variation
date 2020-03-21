@@ -11,6 +11,7 @@ module view_variation {
     /*
         This example function accepts any number of parameters and returns results in a KBaseReport
     */
+
     funcdef run_view_variation(mapping<string,string> params) returns (ReportResults output) authentication required;
 
 };
