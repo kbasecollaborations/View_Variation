@@ -13,12 +13,12 @@ icon: icon.png
 #
 # define a set of similar apps that might be useful to the user
 #
-suggestions:
+suggestions: []
     apps:
         related:
-            [app1, app2]
+            []
         next:
-            [app3, app4]
+            []
 
 #
 # Configure the display and description of parameters
@@ -26,9 +26,9 @@ suggestions:
 parameters :
     parameter_1 :
         ui-name : |
-            First parameter
+            vcf file
         short-hint : |
-            The first parameter
+            vcf file for visualisation
         long-hint  : |
             The first parameter that needs to be entered to drive the method. This might be the first of many.
 

@@ -19,7 +19,7 @@ class htmlreportutils:
         report_name = 'kb_gsea_report_' + str(uuid.uuid4())
         report = KBaseReport(callback_url)
       
-        htmlstring = "sample output"
+        htmlstring = "<a href=" + output_dir + "/jbrowse/index.html>report link</a>"
         index_file_path = output_dir + "/index.html"
         html_file = open(index_file_path, "wt")
         n = html_file.write(htmlstring)
