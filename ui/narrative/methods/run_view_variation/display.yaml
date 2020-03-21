@@ -13,7 +13,7 @@ icon: icon.png
 #
 # define a set of similar apps that might be useful to the user
 #
-suggestions: []
+suggestions: 
     apps:
         related:
             []
