@@ -18,7 +18,8 @@ class htmlreportutils:
         dfu = DataFileUtil(callback_url)
         report_name = 'kb_gsea_report_' + str(uuid.uuid4())
         report = KBaseReport(callback_url)
-      
+        report_dir = "localhost" 
+        #htmlstring = "<a href=" + report_dir + "/jbrowse/index.html>report link</a>"
         htmlstring = "<a href=" + output_dir + "/jbrowse/index.html>report link</a>"
         index_file_path = output_dir + "/index.html"
         html_file = open(index_file_path, "wt")
