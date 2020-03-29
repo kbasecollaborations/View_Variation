@@ -12,6 +12,188 @@
          "urlTemplate" : "seq/{refseq_dirpath}/{refseq}-"
       },
       {
+         "label"         : "Stain1",
+         "key"           : "stain1",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_7996cafa-4ca5-48f5-8bf0-e8ba94606275.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain2",
+         "key"           : "stain2",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_b68aebde-79d8-492b-9335-9a4ef341bfaa.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain3",
+         "key"           : "stain3",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_1c100f58-7488-4a49-abb6-5c167f13a735.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain4",
+         "key"           : "stain4",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_4eac03ce-36f5-46a8-a706-18401f21cbd6.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain5",
+         "key"           : "stain5",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_59732f3a-7fe2-4c8e-9f59-d7fbbd053904.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain6",
+         "key"           : "stain6",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_d5024ed1-32bf-47c9-838d-68153b5c3454.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain7",
+         "key"           : "stain7",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_abc71dad-7783-47ea-a1e0-8f5d6ae9400f.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain8",
+         "key"           : "stain8",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_f079c8be-3ebd-45d3-9d6f-6c4fa54a2a66.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain9",
+         "key"           : "stain9",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_e8c98c67-3a52-481c-ace6-99478c377ff4.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain10",
+         "key"           : "stain10",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_1afd823c-5775-4183-91ef-2ae888710217.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain11",
+         "key"           : "stain11",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_9da6c2ab-7e67-4703-bc76-a4adc1bb9534.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain12",
+         "key"           : "stain12",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_7c4feef9-2a9a-4d42-8f22-57e1049a30c9.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain13",
+         "key"           : "stain13",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_d3af88ed-f570-4038-a3a8-7d79c249ecaa.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain14",
+         "key"           : "stain14",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_c02ff991-193d-4e9c-ab32-cc8b65561697.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain15",
+         "key"           : "stain15",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_3eb9bad3-d0a4-45f5-bf21-e538230b37ea.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain16",
+         "key"           : "stain16",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_b9cb3880-cc0d-4653-9449-61a33cc2eb1f.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain17",
+         "key"           : "stain17",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_4d9455b0-c854-4770-8fe2-84905979ec78.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain18",
+         "key"           : "stain18",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_c9779773-0ec0-43c8-9c67-44bdb82b675a.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain19",
+         "key"           : "stain19",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_4cce3afe-7fd0-41a5-9285-ed0b627253c5.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain20",
+         "key"           : "stain20",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_932061a5-c5f5-4195-a5cd-2b8445008544.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain21",
+         "key"           : "stain21",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_f392276c-77a5-4506-b5c4-bcaf8193b6d9.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain22",
+         "key"           : "stain22",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_0ac16ce6-b688-4781-97bb-8593cac5ca2d.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain23",
+         "key"           : "stain23",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_7b637fb1-ac65-4419-b14d-a2f8bddc5b2c.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain24",
+         "key"           : "stain24",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_d0f8e119-7400-4901-8ecb-7d7dfc903f98.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+       {
+         "label"         : "Stain25",
+         "key"           : "stain25",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_f871f961-4857-4407-8b2c-e18f91106590.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
+         "label"         : "Stain26",
+         "key"           : "stain26",
+         "storeClass"    : "JBrowse/Store/SeqFeature/VCFTabix",
+         "urlTemplate"   : "vcf_ec37424d-7be5-485d-bfcc-2a4117687a4c.vcf.gz",
+         "type"          : "JBrowse/View/Track/HTMLVariants"
+      },
+      {
          "compress" : 0,
          "key" : "gene",
          "label" : "gene",
