@@ -1,56 +1,50 @@
 import uuid
 import os
+import json
 from installed_clients.DataFileUtilClient import DataFileUtil
 from installed_clients.KBaseReportClient import KBaseReport
 from installed_clients.WorkspaceClient import Workspace
 import shutil 
 
-class htmlreportutils:
+class variationutils:
     def __init__(self):
         self.organism_dict = {}
         pass
 
     def prepare_genome(self, output_dir, genome_file):
         '''
-         function for preparing genome
+        function for preparing genome
         '''
+        os.system("perl -MCPAN -Mlocal::lib=my_lwp -e 'CPAN::install(LWP)'")
+        os.system("perl -MCPAN -Mlocal::lib=--self-contained,my_lwp -e 'CPAN::install(LWP)'")
+        os.system(output_dir+"/jbrowse/setup.sh")
+        cmd = output_dir + "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/test/sample_data/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa"
+        os.system(cmd)
 
-        dfu = DataFileUtil(callback_url)
-        report_name = 'kb_gsea_report_' + str(uuid.uuid4())
-        report = KBaseReport(callback_url)
-        report_dir = "localhost" 
-        #htmlstring = "<a href=" + report_dir + "/jbrowse/index.html>report link</a>"
-        htmlstring = "<a href=" + output_dir + "/jbrowse/index.html>report link</a>"
-        index_file_path = output_dir + "/index.html"
-        html_file = open(index_file_path, "wt")
-        n = html_file.write(htmlstring)
-        html_file.close()
-        # Source path 
-        source = "/kb/module/deps/jbrowse"
-  
-        # Destination path 
-        destination = output_dir +"/jbrowse"
-  
-        dest = shutil.copytree(source, destination) 
+    def prepare_vcf(self, output_dir, vcf_file):
+        '''
+        function for preparing vcf file
+        '''
+        os.system("cp /kb/module/test/sample_data/snps.vcf " + output_dir)
+        zipcmd = "bgzip "  + output_dir + "/snps.vcf"
+        os.system(zipcmd)
+        indexcmd = "tabix -p vcf " + output_dir + "/snps.vcf.gz"
+        os.system(indexcmd)
 
-        report_shock_id = dfu.file_to_shock({'file_path': output_dir,
-                                            'pack': 'zip'})['shock_id']
-
-        html_file = {
-            'shock_id': report_shock_id,
-            'name': 'index.html',
-            'label': 'index.html',
-            'description': 'HTMLL report for GSEA'
-            }
-        
-        report_info = report.create_extended_report({
-                        'direct_html_link_index': 0,
-                        'html_links': [html_file],
-                        'report_object_name': report_name,
-                        'workspace_name': workspace_name
-                    })
-        return {
-            'report_name': report_info['name'],
-            'report_ref': report_info['ref']
-        }
-
+    def updateJson(jsonfile, trackname):
+        '''
+        function for updating json file with track information
+        '''
+        data = {}
+        with open(jsonfile) as json_file:
+           data = json.load(json_file)
+           data['tracks'].append({
+           'label': trackname,
+           'key': trackname,
+           'storeClass': 'JBrowse/Store/SeqFeature/VCFTabix',
+           'urlTemplate'   : trackname,
+           'type'          : 'JBrowse/View/Track/HTMLVariants'
+           })
+       
+        with open(jsonfile, 'w') as outfile:
+           json.dump(data, outfile) 

@@ -15,6 +15,10 @@ COPY ./ /kb/module
 RUN mkdir -p /kb/module/work
 RUN chmod -R a+rw /kb/module
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends tabix 
+    #&& liblocal-lib-perl
+
 WORKDIR /kb/module
 
 RUN make all

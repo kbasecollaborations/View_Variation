@@ -6,6 +6,7 @@ import uuid
 
 from installed_clients.KBaseReportClient import KBaseReport
 from view_variation.Utils.htmlreportutils import htmlreportutils
+from view_variation.Utils.variationutils import variationutils
 #END_HEADER
 
 
@@ -40,6 +41,7 @@ class view_variation:
         logging.basicConfig(format='%(created)s %(levelname)s: %(message)s',
                             level=logging.INFO)
         self.hr = htmlreportutils()
+        self.vu = variationutils()
         #END_CONSTRUCTOR
         pass
 
@@ -59,12 +61,16 @@ class view_variation:
         workspace = params['workspace_name']
         outputdir = self.shared_folder + '/' + str(uuid.uuid1())
         os.mkdir(outputdir)
+        
+
         '''
         report_info = report.create({'report': {'objects_created':[],
                                                 'text_message': params['parameter_1']},
                                                 'workspace_name': params['workspace_name']})
         '''                                        
         output = self.hr.create_html_report(self.callback_url, outputdir, workspace)
+        self.vu.prepare_genome(outputdir, "genome_file")
+        self.vu.prepare_vcf(outputdir, "vcf_fie")
         report = KBaseReport(self.callback_url)
         #END run_view_variation
 
