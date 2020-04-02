@@ -25,8 +25,8 @@ class view_variation:
     # the latter method is running.
     ######################################### noqa
     VERSION = "0.0.1"
-    GIT_URL = "https://github.com/man4ish/view_variation.git"
-    GIT_COMMIT_HASH = "a1e00e3b90653953193d1adc953f6e80015fcc2a"
+    GIT_URL = ""
+    GIT_COMMIT_HASH = ""
 
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER
@@ -47,9 +47,7 @@ class view_variation:
     def run_view_variation(self, ctx, params):
         """
         This example function accepts any number of parameters and returns results in a KBaseReport
-        :param params: instance of type "InputParams" -> structure: parameter
-           "vcf_ref" of String, parameter "workspace_name" of String,
-           parameter "genome_or_assembly_ref" of String
+        :param params: instance of mapping from String to String
         :returns: instance of type "ReportResults" -> structure: parameter
            "report_name" of String, parameter "report_ref" of String
         """

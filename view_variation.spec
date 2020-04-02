@@ -8,10 +8,17 @@ module view_variation {
         string report_ref;
     } ReportResults;
 
+    typedef structure{
+        string vcf_ref;
+        string workspace_name;
+        string genome_or_assembly_ref;
+    } InputParams;
+
+
     /*
         This example function accepts any number of parameters and returns results in a KBaseReport
     */
 
-    funcdef run_view_variation(mapping<string,string> params) returns (ReportResults output) authentication required;
+    funcdef run_view_variation(InputParams params) returns (ReportResults output) authentication required;
 
 };
