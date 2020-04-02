@@ -30,9 +30,9 @@ suggestions:
 parameters :
     vcf_ref :
         ui-name : |
-            vcf file
+            vcf object
         short-hint : |
-            vcf file for visualisation
+            vcf object for visualisation
         long-hint  : |
             The first parameter that needs to be entered to drive the method. This might be the first of many.
 
