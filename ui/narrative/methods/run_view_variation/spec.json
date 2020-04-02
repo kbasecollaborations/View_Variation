@@ -55,9 +55,6 @@
                 },{
                     "narrative_system_variable": "workspace_id",
                     "target_property": "workspace_id"
-                },{
-                    "input_parameter": "parameter_1",
-                    "target_property": "parameter_1"
                 }
             ],
             "output_mapping": [
