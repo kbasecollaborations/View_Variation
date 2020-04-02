@@ -64,5 +64,4 @@ class view_variationTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_view_variation(self.ctx, {'workspace_name': 'man4ish_gupta:narrative_1579638904735',
-                                                             'parameter_1': 'Hello World!'})
+        ret = self.serviceImpl.run_view_variation(self.ctx, {'workspace_name': 'man4ish_gupta:narrative_1579638904735'})

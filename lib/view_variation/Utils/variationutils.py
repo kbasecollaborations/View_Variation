@@ -10,9 +10,9 @@ class htmlreportutils:
         self.organism_dict = {}
         pass
 
-    def create_html_report(self, callback_url, output_dir, workspace_name):
+    def prepare_genome(self, output_dir, genome_file):
         '''
-         function for creating html report
+         function for preparing genome
         '''
 
         dfu = DataFileUtil(callback_url)
