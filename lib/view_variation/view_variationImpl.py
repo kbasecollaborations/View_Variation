@@ -7,6 +7,7 @@ import uuid
 from installed_clients.KBaseReportClient import KBaseReport
 from view_variation.Utils.htmlreportutils import htmlreportutils
 from view_variation.Utils.variationutils import variationutils
+from view_variation.Utils.Downloaddatautils import Downloaddatautils
 #END_HEADER
 
 
@@ -42,6 +43,7 @@ class view_variation:
                             level=logging.INFO)
         self.hr = htmlreportutils()
         self.vu = variationutils()
+        self.du =Downloaddatautils() 
         #END_CONSTRUCTOR
         pass
 
@@ -67,7 +69,12 @@ class view_variation:
         report_info = report.create({'report': {'objects_created':[],
                                                 'text_message': params['parameter_1']},
                                                 'workspace_name': params['workspace_name']})
-        '''                                        
+        '''                                      
+        self.du.download_genome(params)
+
+        params['variation_name'] = "snps.vcf"   #hardcode for testing
+        self.du.download_vcf(params)
+
         output = self.hr.create_html_report(self.callback_url, outputdir, workspace)
         self.vu.prepare_genome(outputdir, "genome_file")
         self.vu.prepare_vcf(outputdir, "vcf_fie")

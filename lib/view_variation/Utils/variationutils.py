@@ -29,7 +29,7 @@ class variationutils:
         indexcmd = "tabix -p vcf " + output_dir + "/jbrowse/data/snps.vcf.gz"
         os.system(indexcmd)
 
-    def updateJson(output_dir, trackname):
+    def updateJson(self, output_dir, trackname):
         '''
         function for updating json file with track information
         '''
