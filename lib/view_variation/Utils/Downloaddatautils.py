@@ -23,6 +23,6 @@ class Downloaddatautils:
         return file
 
     def download_vcf(self, params):
-        params['input_var_ref'] = vcf_ref
+        params['input_var_ref'] = params['vcf_ref']
         self.vu.export_variation_as_vcf(params)
 
