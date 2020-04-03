@@ -15,26 +15,25 @@ class variationutils:
         '''
         function for preparing genome
         '''
-        os.system("perl -MCPAN -Mlocal::lib=my_lwp -e 'CPAN::install(LWP)'")
-        os.system("perl -MCPAN -Mlocal::lib=--self-contained,my_lwp -e 'CPAN::install(LWP)'")
-        os.system(output_dir+"/jbrowse/setup.sh")
-        cmd = output_dir + "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/test/sample_data/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa"
+        #os.system(output_dir + "/jbrowse/bin/cpanm -l extlib --installdeps .")
+        cmd = "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/test/sample_data/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa --out " + output_dir + "/jbrowse/data"
         os.system(cmd)
 
     def prepare_vcf(self, output_dir, vcf_file):
         '''
         function for preparing vcf file
         '''
-        os.system("cp /kb/module/test/sample_data/snps.vcf " + output_dir)
-        zipcmd = "bgzip "  + output_dir + "/snps.vcf"
+        os.system("cp /kb/module/test/sample_data/snps.vcf " + output_dir + "/jbrowse/data")
+        zipcmd = "bgzip "  + output_dir + "/jbrowse/data/snps.vcf"
         os.system(zipcmd)
-        indexcmd = "tabix -p vcf " + output_dir + "/snps.vcf.gz"
+        indexcmd = "tabix -p vcf " + output_dir + "/jbrowse/data/snps.vcf.gz"
         os.system(indexcmd)
 
-    def updateJson(jsonfile, trackname):
+    def updateJson(output_dir, trackname):
         '''
         function for updating json file with track information
         '''
+        jsonfile = output_dir + "/jbrowse/data/trackList.json"
         data = {}
         with open(jsonfile) as json_file:
            data = json.load(json_file)
