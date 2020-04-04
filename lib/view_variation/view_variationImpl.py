@@ -78,7 +78,7 @@ class view_variation:
         output = self.hr.create_html_report(self.callback_url, outputdir, workspace)
         self.vu.prepare_genome(outputdir, "genome_file")
         self.vu.prepare_vcf(outputdir, "vcf_fie")
-        self.vu.updateJson(outputdir, "snps.vcf.gz")
+        self.vu.updateJson(outputdir, "original_snps.vcf.gz")
         report = KBaseReport(self.callback_url)
         #END run_view_variation
 
