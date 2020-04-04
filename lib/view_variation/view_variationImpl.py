@@ -69,7 +69,7 @@ class view_variation:
         report_info = report.create({'report': {'objects_created':[],
                                                 'text_message': params['parameter_1']},
                                                 'workspace_name': params['workspace_name']})
-        '''                                      
+        ''' 
         self.du.download_genome(params)
 
         params['variation_name'] = "snps.vcf"   #hardcode for testing

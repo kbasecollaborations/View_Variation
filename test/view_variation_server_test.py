@@ -64,4 +64,6 @@ class view_variationTest(unittest.TestCase):
         #
         # Check returned data with
         # self.assertEqual(ret[...], ...) or other unittest methods
-        ret = self.serviceImpl.run_view_variation(self.ctx, {'workspace_name': 'man4ish_gupta:narrative_1579638904735'})
+        ret = self.serviceImpl.run_view_variation(self.ctx, {'workspace_name': 'man4ish_gupta:narrative_1585669223193',
+                   'genome_or_assembly_ref': '39768/4/1',
+                   'vcf_ref': '39830/37/5'})
