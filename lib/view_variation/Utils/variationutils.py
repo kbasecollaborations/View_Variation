@@ -15,7 +15,7 @@ class variationutils:
         '''
         function for preparing genome
         '''
-        cmd = "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/test_local/work/tmp/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa --out " + output_dir + "/jbrowse/data"
+        cmd = "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/work/tmp/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa --out " + output_dir + "/jbrowse/data"
         #cmd = "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/test/sample_data/GCA_009858895.3_ASM985889v3_genomic.gbff_genome_assembly.fa_assembly.fa --out " + output_dir + "/jbrowse/data"
         os.system(cmd)
 
@@ -24,7 +24,7 @@ class variationutils:
         function for preparing vcf file
         '''
         #os.system("cp /kb/module/test/sample_data/snps.vcf " + output_dir + "/jbrowse/data")
-        os.system("cp /kb/module/test_local/work/tmp/corona_vcf/snps.vcf " + output_dir + "/jbrowse/data")
+        os.system("cp /kb/module/work/tmp/corona_vcf/snps.vcf " + output_dir + "/jbrowse/data")
         zipcmd = "bgzip "  + output_dir + "/jbrowse/data/snps.vcf"
         os.system(zipcmd)
         indexcmd = "tabix -p vcf " + output_dir + "/jbrowse/data/snps.vcf.gz"
