@@ -24,10 +24,10 @@ class variationutils:
         function for preparing vcf file
         '''
         #os.system("cp /kb/module/test/sample_data/snps.vcf " + output_dir + "/jbrowse/data")
-        os.system("cp /kb/module/work/tmp/corona_vcf/snps.vcf " + output_dir + "/jbrowse/data")
-        zipcmd = "bgzip "  + output_dir + "/jbrowse/data/snps.vcf"
+        os.system("cp /kb/module/work/tmp/corona_vcf/original_snps.vcf " + output_dir + "/jbrowse/data")
+        zipcmd = "bgzip "  + output_dir + "/jbrowse/data/original_snps.vcf"
         os.system(zipcmd)
-        indexcmd = "tabix -p vcf " + output_dir + "/jbrowse/data/snps.vcf.gz"
+        indexcmd = "tabix -p vcf " + output_dir + "/jbrowse/data/original_snps.vcf.gz"
         os.system(indexcmd)
 
     def updateJson(self, output_dir, trackname):
