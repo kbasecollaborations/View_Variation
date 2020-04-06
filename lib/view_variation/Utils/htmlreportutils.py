@@ -26,13 +26,13 @@ class htmlreportutils:
         n = html_file.write(htmlstring)
         html_file.close()
         # Source path 
-        source = "/kb/module/deps/jbrowse"
+        #source = "/kb/module/deps/jbrowse"
   
         # Destination path 
-        destination = output_dir +"/jbrowse"
+        #destination = output_dir +"/jbrowse"
   
         #dest = shutil.copytree(source, destination) 
-        os.system("cp -r " + source +" "+ destination)
+        #os.system("cp -r " + source +" "+ destination)
 
         report_shock_id = dfu.file_to_shock({'file_path': output_dir,
                                             'pack': 'zip'})['shock_id']
