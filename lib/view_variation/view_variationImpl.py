@@ -62,9 +62,9 @@ class view_variation:
         #BEGIN run_view_variation
         workspace = params['workspace_name']
         outputdir = self.shared_folder + '/' + str(uuid.uuid1())
-        #os.mkdir(outputdir)
+        os.mkdir(outputdir)
          # Source path 
-        source = "/kb/module/deps/jbrowse"
+        source = "/kb/module/deps/jbrowse/"
 
         # Destination path 
         destination = outputdir +"/jbrowse"
