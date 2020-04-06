@@ -32,7 +32,7 @@ class htmlreportutils:
         destination = output_dir +"/jbrowse"
   
         #dest = shutil.copytree(source, destination) 
-        os.sytem("cp -r " + source +" "+ destination)
+        os.system("cp -r " + source +" "+ destination)
 
         report_shock_id = dfu.file_to_shock({'file_path': output_dir,
                                             'pack': 'zip'})['shock_id']
