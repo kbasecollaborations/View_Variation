@@ -20,7 +20,7 @@ class htmlreportutils:
         report = KBaseReport(callback_url)
         report_dir = "localhost" 
         #htmlstring = "<a href=" + report_dir + "/jbrowse/index.html>report link</a>"
-        htmlstring = "<a href="+ output_dir +  "'/jbrowse/index.html' >report link</a>"
+        htmlstring = "<a href='./jbrowse/index.html' >report link</a>"
         index_file_path = output_dir + "/index.html"
         html_file = open(index_file_path, "wt")
         n = html_file.write(htmlstring)
