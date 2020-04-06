@@ -74,11 +74,12 @@ class view_variation:
 
         params['variation_name'] = "snps.vcf"   #hardcode for testing
         self.du.download_vcf(params)
-
         output = self.hr.create_html_report(self.callback_url, outputdir, workspace)
-        self.vu.prepare_genome(outputdir, "genome_file")
-        self.vu.prepare_vcf(outputdir, "vcf_fie")
+ 
+        self.vu.prepare_genome(outputdir, "genome_file")  #hardcode for testing
+        self.vu.prepare_vcf(outputdir, "vcf_fie")         #hardcode for testing
         self.vu.updateJson(outputdir, "original_snps.vcf.gz")
+
         report = KBaseReport(self.callback_url)
         #END run_view_variation
 
