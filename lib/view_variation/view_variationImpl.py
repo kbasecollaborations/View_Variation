@@ -7,7 +7,7 @@ import uuid
 from installed_clients.KBaseReportClient import KBaseReport
 from view_variation.Utils.htmlreportutils import htmlreportutils
 from view_variation.Utils.variationutils import variationutils
-from view_variation.Utils.Downloaddatautils import Downloaddatautils
+from view_variation.Utils.downloaddatautils import downloaddatautils
 #END_HEADER
 
 
@@ -43,7 +43,7 @@ class view_variation:
                             level=logging.INFO)
         self.hr = htmlreportutils()
         self.vu = variationutils()
-        self.du =Downloaddatautils() 
+        self.du = downloaddatautils() 
         #END_CONSTRUCTOR
         pass
 
