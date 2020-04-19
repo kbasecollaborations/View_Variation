@@ -22,7 +22,6 @@ RUN mkdir -p /jbrowse/ && git clone --recursive https://github.com/gmod/jbrowse 
     cd /jbrowse/ && \
     git checkout 1.12.3-release && ./setup.sh
 
-#RUN conda install -c bioconda jbrowse
 
 WORKDIR /kb/module
 

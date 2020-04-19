@@ -2,7 +2,6 @@
 import os
 import time
 import unittest
-import uuid
 from configparser import ConfigParser
 
 from view_variation.view_variationImpl import view_variation
@@ -67,3 +66,4 @@ class view_variationTest(unittest.TestCase):
         ret = self.serviceImpl.run_view_variation(self.ctx, {'workspace_name': 'man4ish_gupta:narrative_1585669223193',
                    'genome_or_assembly_ref': '39768/4/1',
                    'vcf_ref': '39830/37/5'})
+
