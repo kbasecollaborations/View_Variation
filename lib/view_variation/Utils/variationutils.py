@@ -5,7 +5,6 @@ import subprocess
 from installed_clients.DataFileUtilClient import DataFileUtil
 from installed_clients.KBaseReportClient import KBaseReport
 from installed_clients.WorkspaceClient import Workspace
-
 import shutil 
 
 class variationutils:
@@ -51,7 +50,7 @@ class variationutils:
         self.run_cmd(indexcmd)
         #os.system(indexcmd)
 
-    def updateJson(self, output_dir, trackname):
+    def updateJson(self, output_dir, trackname, gz_filename, tbi_filename):
         '''
         function for updating json file with track information
         '''
@@ -63,7 +62,8 @@ class variationutils:
            'label': trackname,
            'key': trackname,
            'storeClass': 'JBrowse/Store/SeqFeature/VCFTabix',
-           'urlTemplate'   : trackname,
+           'urlTemplate'    : gz_filename,
+           'tbiUrlTemplate' : tbi_filename,
            'type'          : 'JBrowse/View/Track/HTMLVariants'
            })
        

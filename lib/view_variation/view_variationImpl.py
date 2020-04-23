@@ -83,7 +83,7 @@ class view_variation:
  
         self.vu.prepare_genome(outputdir, "genome_file")  #hardcode for testing
         self.vu.prepare_vcf(outputdir, "vcf_fie")         #hardcode for testing
-        self.vu.updateJson(outputdir, "original_snps.vcf.gz")
+        self.vu.updateJson(outputdir, "snps.vcf", "https://appdev.kbase.us/dynserv/d184e3d4c94c63510ba6f29f6c1721b570982398.VariationFileServ/jbrowse/data/A1B2C3D4", "https://appdev.kbase.us/dynserv/d184e3d4c94c63510ba6f29f6c1721b570982398.VariationFileServ/jbrowse/data/A1B2C3D4E5")  #hardcode for testing
 
         output = self.hr.create_html_report(self.callback_url, outputdir, workspace) 
         report = KBaseReport(self.callback_url)
