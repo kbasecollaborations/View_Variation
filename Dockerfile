@@ -18,9 +18,9 @@ RUN chmod -R a+rw /kb/module
 RUN apt-get update \
     && apt-get install -y --no-install-recommends tabix 
 
-RUN mkdir -p /jbrowse/ && git clone --recursive https://github.com/gmod/jbrowse /jbrowse/ && \
-    cd /jbrowse/ && \
-    git checkout 1.12.3-release && ./setup.sh
+#RUN mkdir -p /jbrowse/ && git clone --recursive https://github.com/gmod/jbrowse /jbrowse/ && \
+#    cd /jbrowse/ && \
+#    git checkout 1.12.3-release && ./setup.sh
 
 
 WORKDIR /kb/module
