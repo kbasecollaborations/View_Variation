@@ -1,9 +1,6 @@
 import uuid
-import os
 from installed_clients.DataFileUtilClient import DataFileUtil
 from installed_clients.KBaseReportClient import KBaseReport
-from installed_clients.WorkspaceClient import Workspace
-import shutil 
 
 class htmlreportutils:
     def __init__(self):

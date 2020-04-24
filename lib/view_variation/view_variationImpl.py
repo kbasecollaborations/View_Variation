@@ -3,7 +3,7 @@
 import logging
 import os
 import uuid
-
+import shutil
 from installed_clients.KBaseReportClient import KBaseReport
 from view_variation.Utils.htmlreportutils import htmlreportutils
 from view_variation.Utils.variationutils import variationutils
@@ -69,7 +69,8 @@ class view_variation:
         # Destination path 
         destination = outputdir +"/jbrowse"
 
-        os.system("cp -r " + source +" "+ destination) 
+        os.system("cp -r " + source +" "+ destination)
+        #shutil.copytree(source, destination)
 
         '''
         report_info = report.create({'report': {'objects_created':[],
