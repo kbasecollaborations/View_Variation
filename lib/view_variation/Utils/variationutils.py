@@ -44,7 +44,7 @@ class variationutils:
         '''
         genome_file = "*.fa_assembly.fa"
         cmd = "/jbrowse/bin/prepare-refseqs.pl --fasta " + "/kb/module/work/tmp/"+ genome_file +" --out " + output_dir + "/jbrowse/data"
-        self.run_cmd(cmd)
+        #self.run_cmd(cmd)
 
     def prepare_vcf(self, output_dir, vcf_file):
         '''
